@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const Button = ({clicker}) => {
 return (
@@ -7,3 +8,7 @@ return (
 }
 
 export default Button
+
+Button.propTypes = {
+    clicker:PropTypes.func.isRequired,
+}

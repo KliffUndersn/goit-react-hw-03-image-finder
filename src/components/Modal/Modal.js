@@ -6,30 +6,24 @@ export default class Modal extends Component {
     componentDidMount() {
         window.addEventListener('keydown',this.closeModals)
      }
+     componentWillUnmount() {
+        window.removeEventListener('keydown',this.closeModals)
+     }
      
     closeModals = (e) => {
            if (e.code === "Escape") {
-              this.props.modalSwitch();
+              this.props.modalClose();
             }
-        
         }
-        
-    backDropClose = (e) => {
-        if (e.target === e.currentTarget) {
-           this.props.modalSwitch();
-        }
-        
-     }
-     componentWillUnmount() {
-          window.removeEventListener('keydown',this.closeModals)
-     }
+     
      render(){
+        const { children } = this.props;
     return (
+        
         <div className="Overlay">
         <div className="Modal">
-            <img src={this.props.largeImage} alt={this.props.largeImage} onClick={()=>this.props.modalSwitch()}  />
+            {children}
         </div>
         </div>
     )}
 }
-

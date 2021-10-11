@@ -215,3 +215,18 @@ html {
     padding: 25px;
     text-align: center;
   }
+
+  .Error {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 24px;
+    font-style: normal;
+    font-weight: 500;
+    min-width: 180px;
+
+  }
