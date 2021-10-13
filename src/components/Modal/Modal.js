@@ -20,7 +20,7 @@ export default class Modal extends Component {
         const { children } = this.props;
     return (
         
-        <div className="Overlay">
+        <div className="Overlay" onClick={this.props.modalClose}>
         <div className="Modal">
             {children}
         </div>

@@ -1,4 +1,3 @@
-import React from 'react'
 import Loaders from "react-loader-spinner";
 
 const Loader = () => {
