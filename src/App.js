@@ -75,7 +75,7 @@ export default class App extends Component {
   modalClose = () => this.setState({modal:false})
 
 
-
+//onClick={()=>this.modalClose()} 
   render() {
     const {largeImage,searchResult,loading,modal,error,tags} = this.state
     return (
@@ -90,7 +90,7 @@ export default class App extends Component {
         <img 
         src={largeImage} 
         alt={tags} 
-        onClick={()=>this.modalClose()}  />
+         />
         </Modal>}
       </div>
     )

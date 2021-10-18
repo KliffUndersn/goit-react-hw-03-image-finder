@@ -15,12 +15,17 @@ export default class Modal extends Component {
               this.props.modalClose();
             }
         }
+    closeByOverlay = (e) => {
+            if (e.target === e.currentTarget) {
+                this.props.modalClose();
+            }
+    }
      
      render(){
         const { children } = this.props;
     return (
         
-        <div className="Overlay" onClick={this.props.modalClose}>
+        <div className="Overlay" onClick={this.closeByOverlay}>
         <div className="Modal">
             {children}
         </div>
